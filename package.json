@@ -4,19 +4,26 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate_article.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^16.4.5",
+    "next": "14.2.3",
+    "notion-to-md": "^3.1.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "zenn-cli": "^0.1.153",
+    "zenn-content-css": "^0.1.153",
+    "zenn-embed-elements": "^0.1.153",
+    "zenn-markdown-html": "^0.1.154"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
   }
 }
