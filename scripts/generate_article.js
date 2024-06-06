@@ -15,7 +15,7 @@ async function generateData() {
   const posts = response.results;
 
   //
-  const postDetails = await Promise.all(
+  const data = await Promise.all(
     posts.map(async (post) => {
       // slugの取得
       const slug = post.properties.slug.rich_text[0].plain_text;
@@ -38,16 +38,15 @@ async function generateData() {
 
       return {
         slug,
+        post,
         postContent,
       };
     })
   );
 
-  console.log(postDetails);
-
   fs.writeFileSync(
-    path.join(__dirname, "../public/postData.json"),
-    JSON.stringify({ postDetails }, null, 2)
+    path.join(__dirname, "../public/data.json"),
+    JSON.stringify({ data }, null, 2)
   );
 }
 
