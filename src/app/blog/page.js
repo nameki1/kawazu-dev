@@ -8,7 +8,7 @@ import { getAllPosts } from "@/util/getAllPosts";
 export default async function Blog() {
   //const slug = publicJson.data.map((d) => d.slug);
   //console.log(slug);
-
+  console.log("ここまで");
   //記事一覧の取得;
   const AllPostsList = await getAllPosts();
   console.log(AllPostsList);

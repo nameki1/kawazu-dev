@@ -33,7 +33,11 @@ async function generateData() {
       const url = post.properties.eyeCatch.files[0].file.url;
       //　ファイルがなければ保存する
       if (!fs.existsSync(destinationPath + filename)) {
-        saveImage(url, filename, destinationPath);
+        saveImage(          url,
+          filename,
+          destinationPath
+        );
+        post.properties.eyeCatch.files[0].file.url = 
       }
 
       return {

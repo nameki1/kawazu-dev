@@ -54,7 +54,7 @@ n2m.setCustomTransformer("image", (block) => {
   //　ファイルがなければ保存する
   try {
     if (!fs.existsSync(destinationPath + filename)) {
-      saveImage(url, filename, destinationPath);
+      block.image.file.url = saveImage(url, filename, destinationPath);
     }
     block.image.file.url = imagesPath + articlePath + filename;
   } catch (error) {
