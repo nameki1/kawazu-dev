@@ -7,8 +7,6 @@ export async function getAllPosts() {
   const publicJson = JSON.parse(fileContents);
 
   const AllPostsList = publicJson.data.map((p) => {
-    console.log(p);
-
     //レコードidの取り出し
     const id = p.post.id;
     //titleの取り出し

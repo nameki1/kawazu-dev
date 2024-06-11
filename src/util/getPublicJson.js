@@ -6,7 +6,5 @@ export async function getPublicJson() {
   const fileContents = fs.readFileSync(filePath, "utf8");
   const publicJson = JSON.parse(fileContents);
 
-  console.log("1", publicJson);
-
   return publicJson;
 }

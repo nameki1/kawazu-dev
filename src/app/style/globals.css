@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* "zenn-content-css"のオーバーライド */
+.znc h1,
+.znc h2 {
+  margin-top: -2.3em !important;
+  padding-top: 4.6em !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 700 !important;
+}
+
+/* テキストカラー */
+body {
+  color: #25271f;
+}
