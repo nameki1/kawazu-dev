@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import { Navbar } from "./components/navbar";
 import "./style/globals.css";
+import "zenn-content-css";
 
 const inter = Inter({ subsets: ["latin"] });
 

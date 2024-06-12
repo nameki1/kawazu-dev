@@ -3,7 +3,7 @@ const path = require("path");
 const dotenv = require("dotenv");
 const { notion } = require("../src/lib/notion");
 const getPostContent = require("../src/util/getPostContent");
-const saveImage = require("../src/util/saveImage");
+const getPostData = require("../src/util/getPostData");
 
 dotenv.config();
 
@@ -17,30 +17,19 @@ async function generateData() {
   //
   const data = await Promise.all(
     posts.map(async (post) => {
+      // 記事情報の取得
+      const p = await getPostData(post);
+
       // slugの取得
-      const slug = post.properties.slug.rich_text[0].plain_text;
+      const slug = p.slug;
 
       // 記事をHTMLにパースして取得
-      const postId = post.id;
+      const postId = p.id;
       const postContent = await getPostContent(postId);
-
-      // アイキャッチ画像の保存
-      // 保存先フォルダのパス
-      const destinationPath = "public/articleImages/" + postId;
-      // 保存ファイル名
-      const filename = "/eyeCatch.png";
-      // 保存したい画像ファイルのリンク
-      const url = post.properties.eyeCatch.files[0].file.url;
-      //　ファイルがなければ保存する
-      if (!fs.existsSync(destinationPath + filename)) {
-        saveImage(url, filename, destinationPath);
-      }
-      post.properties.eyeCatch.files[0].file.url =
-        "/articleImages/" + postId + filename;
 
       return {
         slug,
-        post,
+        p,
         postContent,
       };
     })

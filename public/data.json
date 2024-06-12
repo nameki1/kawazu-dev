@@ -2,336 +2,38 @@
   "data": [
     {
       "slug": "practice",
-      "post": {
-        "object": "page",
+      "p": {
         "id": "828510f0-edbc-428b-9141-169be0964f49",
-        "created_time": "2024-06-06T10:29:00.000Z",
-        "last_edited_time": "2024-06-06T10:30:00.000Z",
-        "created_by": {
-          "object": "user",
-          "id": "431ba019-5ee0-4fe1-9cc1-c86032f8e25c"
-        },
-        "last_edited_by": {
-          "object": "user",
-          "id": "431ba019-5ee0-4fe1-9cc1-c86032f8e25c"
-        },
-        "cover": null,
-        "icon": null,
-        "parent": {
-          "type": "database_id",
-          "database_id": "32afa0cf-558e-4f43-ae55-88dd64f844a7"
-        },
-        "archived": false,
-        "in_trash": false,
-        "properties": {
-          "category": {
-            "id": "%3C%5D%7Dr",
-            "type": "select",
-            "select": {
-              "id": "ea3d0392-1118-4673-a97e-5b0b2d02b71a",
-              "name": "Tech",
-              "color": "default"
-            }
-          },
-          "overview": {
-            "id": "H%5CLs",
-            "type": "rich_text",
-            "rich_text": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "aaa",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "aaa",
-                "href": null
-              }
-            ]
-          },
-          "eyeCatch": {
-            "id": "IYJu",
-            "type": "files",
-            "files": [
-              {
-                "name": "アイキャッチ.png",
-                "type": "file",
-                "file": {
-                  "url": "/articleImages/828510f0-edbc-428b-9141-169be0964f49/eyeCatch.png",
-                  "expiry_time": "2024-06-11T23:18:18.228Z"
-                }
-              }
-            ]
-          },
-          "tags": {
-            "id": "MipG",
-            "type": "multi_select",
-            "multi_select": [
-              {
-                "id": "db4cff2e-86d6-42a3-92e2-83043a16714d",
-                "name": "Python",
-                "color": "default"
-              }
-            ]
-          },
-          "publishedAt": {
-            "id": "N%7Dh%3B",
-            "type": "date",
-            "date": {
-              "start": "2024-06-06",
-              "end": null,
-              "time_zone": null
-            }
-          },
-          "status": {
-            "id": "S%40L%3C",
-            "type": "status",
-            "status": {
-              "id": "bee244bf-6326-4904-99cf-8bee9a502f84",
-              "name": "未着手",
-              "color": "default"
-            }
-          },
-          "slug": {
-            "id": "vG%3E_",
-            "type": "rich_text",
-            "rich_text": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "practice",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "practice",
-                "href": null
-              }
-            ]
-          },
-          "published": {
-            "id": "z%3C%7B%7B",
-            "type": "checkbox",
-            "checkbox": false
-          },
-          "updateAt": {
-            "id": "%7Bh%40P",
-            "type": "date",
-            "date": {
-              "start": "2024-06-06",
-              "end": null,
-              "time_zone": null
-            }
-          },
-          "title": {
-            "id": "title",
-            "type": "title",
-            "title": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "練習用に記事を作ってみる",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "練習用に記事を作ってみる",
-                "href": null
-              }
-            ]
-          }
-        },
-        "url": "https://www.notion.so/828510f0edbc428b9141169be0964f49",
-        "public_url": null
+        "title": "練習用に記事を作ってみる",
+        "published": false,
+        "tags": [
+          "Python"
+        ],
+        "category": "Tech",
+        "overview": "aaa",
+        "publishedAt": "2024-06-06",
+        "updateAt": "2024-06-06",
+        "eyeCatch": "/articleImages/828510f0-edbc-428b-9141-169be0964f49/eyeCatch.png",
+        "slug": "practice"
       },
       "postContent": {}
     },
     {
       "slug": "nextjs-hamburger-menu",
-      "post": {
-        "object": "page",
+      "p": {
         "id": "c5633f78-9cf2-431e-8d7a-d5cb8cc017c9",
-        "created_time": "2024-05-12T02:16:00.000Z",
-        "last_edited_time": "2024-05-19T06:00:00.000Z",
-        "created_by": {
-          "object": "user",
-          "id": "431ba019-5ee0-4fe1-9cc1-c86032f8e25c"
-        },
-        "last_edited_by": {
-          "object": "user",
-          "id": "431ba019-5ee0-4fe1-9cc1-c86032f8e25c"
-        },
-        "cover": null,
-        "icon": null,
-        "parent": {
-          "type": "database_id",
-          "database_id": "32afa0cf-558e-4f43-ae55-88dd64f844a7"
-        },
-        "archived": false,
-        "in_trash": false,
-        "properties": {
-          "category": {
-            "id": "%3C%5D%7Dr",
-            "type": "select",
-            "select": {
-              "id": "ea3d0392-1118-4673-a97e-5b0b2d02b71a",
-              "name": "Tech",
-              "color": "default"
-            }
-          },
-          "overview": {
-            "id": "H%5CLs",
-            "type": "rich_text",
-            "rich_text": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "そこは時間できるだけこのぼんやりらに対してののところを眺めないた。もっと晩に使用論はとにかくこういう欠乏あるですばかりへするて行くないがは教育考えらしいまして、だんだんとはありたなないない。",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "そこは時間できるだけこのぼんやりらに対してののところを眺めないた。もっと晩に使用論はとにかくこういう欠乏あるですばかりへするて行くないがは教育考えらしいまして、だんだんとはありたなないない。",
-                "href": null
-              }
-            ]
-          },
-          "eyeCatch": {
-            "id": "IYJu",
-            "type": "files",
-            "files": [
-              {
-                "name": "アイキャッチ.png",
-                "type": "file",
-                "file": {
-                  "url": "/articleImages/c5633f78-9cf2-431e-8d7a-d5cb8cc017c9/eyeCatch.png",
-                  "expiry_time": "2024-06-11T23:18:18.228Z"
-                }
-              }
-            ]
-          },
-          "tags": {
-            "id": "MipG",
-            "type": "multi_select",
-            "multi_select": [
-              {
-                "id": "0dcbcccb-745e-4ccf-a3b4-70626321dda4",
-                "name": "Tailwind CSS",
-                "color": "gray"
-              },
-              {
-                "id": "316ed546-6769-47ce-b34d-2f8abce63b02",
-                "name": "next.js",
-                "color": "yellow"
-              }
-            ]
-          },
-          "publishedAt": {
-            "id": "N%7Dh%3B",
-            "type": "date",
-            "date": {
-              "start": "2024-05-12",
-              "end": null,
-              "time_zone": null
-            }
-          },
-          "status": {
-            "id": "S%40L%3C",
-            "type": "status",
-            "status": {
-              "id": "e3775b09-343d-4f6e-bb48-56ab8489386b",
-              "name": "進行中",
-              "color": "blue"
-            }
-          },
-          "slug": {
-            "id": "vG%3E_",
-            "type": "rich_text",
-            "rich_text": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "nextjs-hamburger-menu",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "nextjs-hamburger-menu",
-                "href": null
-              }
-            ]
-          },
-          "published": {
-            "id": "z%3C%7B%7B",
-            "type": "checkbox",
-            "checkbox": true
-          },
-          "updateAt": {
-            "id": "%7Bh%40P",
-            "type": "date",
-            "date": {
-              "start": "2024-05-13",
-              "end": null,
-              "time_zone": null
-            }
-          },
-          "title": {
-            "id": "title",
-            "type": "title",
-            "title": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "Next.js でハンバーガーメニューをいい感じに実装する",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "Next.js でハンバーガーメニューをいい感じに実装する",
-                "href": null
-              }
-            ]
-          }
-        },
-        "url": "https://www.notion.so/Next-js-c5633f789cf2431e8d7ad5cb8cc017c9",
-        "public_url": null
+        "title": "Next.js でハンバーガーメニューをいい感じに実装する",
+        "published": true,
+        "tags": [
+          "Tailwind CSS",
+          "next.js"
+        ],
+        "category": "Tech",
+        "overview": "そこは時間できるだけこのぼんやりらに対してののところを眺めないた。もっと晩に使用論はとにかくこういう欠乏あるですばかりへするて行くないがは教育考えらしいまして、だんだんとはありたなないない。",
+        "publishedAt": "2024-05-12",
+        "updateAt": "2024-05-13",
+        "eyeCatch": "/articleImages/c5633f78-9cf2-431e-8d7a-d5cb8cc017c9/eyeCatch.png",
+        "slug": "nextjs-hamburger-menu"
       },
       "postContent": {
         "parent": "\n# こんな感じのサイドバーを作りたい\n\n\n![18c26bcd-3789-47e3-acf3-0e67e709f1b7.png](/articleImages/c5633f78-9cf2-431e-8d7a-d5cb8cc017c9/18c26bcd-3789-47e3-acf3-0e67e709f1b7.png)\n\n\n# よくあるヘッダーメニューをつくる\n\n\nまずはじめによくあるヘッダーメニューを作ってみます。\n\n\n```javascript:page.js\nexport default async function Home() {\n  return (\n    <main>\n      <header className=\"drop-shadow-xl bg-white\">\n        <div className=\" flex items-center container m-auto justify-between py-10 px-4 text-lg\">\n          <h2 className=\" font-bold text-3xl\">タイトル</h2>\n          <div>\n            <a href=\"/\" className=\" px-3\">\n              メニュー１\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー２\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー３\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー４\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー５\n            </a>\n          </div>\n        </div>\n      </header>\n    </main>\n  );\n}\n```\n\n\nノート PC のような大きい画面で見る場合はこれで十分なのですが、スマホのような小さい画面で表示すると画面幅にメニューが入り切らずレイアウトが大きく崩れます。\nそのため、スマホのような小さな画面では必要に応じてメニューを展開できるハンバーガーメニューが好まれます。\n\n\n# ハンバーガーメニューを実装する\n\n\nここから、タップしたらメニューがスライドインし、もう一度タップしたらメニューがスライドアウトするハンバーガーメニューを作っていきます。\n\n\n## react-icons のインストール\n\n\nまずはじめにハンバーガーメニューのアイコンは[react-icons](https://react-icons.github.io/react-icons/)を利用するので、インストールしておきましょう。\n\n\n```shell\n$ npm i react-icons\n```\n\n\n## ハンバーガーメニューを設置する\n\n\nヘッダーに横並びで設置していたメニュー部分はタブレットサイズ以上のみで表示させるために`className=\"hidden md:inline-flex\"`を指定します。\n逆に追加したハンバーガーメニューはスマホサイズのみで表示させるため`className=\"md:hidden\"`を指定します。\n\n\n```diff javascript:page.js\n+ \"use client\";\n+ import { RxHamburgerMenu } from \"react-icons/rx\";\n+ import { IconContext } from \"react-icons\";\n\nexport default async function Home() {\n  return (\n    <main>\n      <header className=\"drop-shadow-xl bg-white\">\n        <div className=\" flex items-center container m-auto justify-between py-10 px-4 text-lg\">\n          <h2 className=\" font-bold text-3xl\">タイトル</h2>\n+          <div className=\"hidden md:inline-flex\">\n            <a href=\"/\" className=\" px-3\">\n              メニュー１\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー２\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー３\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー４\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー５\n            </a>\n          </div>\n\n+         {/* ハンバーガーメニュー */}\n+          <IconContext.Provider value={{ size: \"30px\" }}>\n+            <button className=\"md:hidden\">\n+              <RxHamburgerMenu />\n+            </button>\n+          </IconContext.Provider>\n        </div>\n      </header>\n    </main>\n  );\n}\n\n```\n\n\n## スライドイン状態を作成する\n\n\nメニューは`absolute`を利用して画面上に重なって表示されるように作ります。\n\n\nまた、閉じるボタンを追加してメニューのスライドインとスライドアウトを操作できるように準備します。\n\n\n```diff javascript:page.js\n\"use client\";\nimport { RxHamburgerMenu } from \"react-icons/rx\";\n+ import { RxCross1 } from \"react-icons/rx\";\nimport { IconContext } from \"react-icons\";\n+ import styles from \"./sidebar.module.css\";\n\nexport default async function Home() {\n  return (\n    <main>\n      <header className=\"drop-shadow-xl bg-white\">\n        <div className=\" flex items-center container m-auto justify-between py-10 px-4 text-lg\">\n          <h2 className=\" font-bold text-3xl\">タイトル</h2>\n          <div className=\"hidden md:inline-flex\">\n            <a href=\"/\" className=\" px-3\">\n              メニュー１\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー２\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー３\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー４\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー５\n            </a>\n          </div>\n\n          {/* ハンバーガーメニュー */}\n          <IconContext.Provider value={{ size: \"30px\" }}>\n            <button className=\"md:hidden\">\n              <RxHamburgerMenu />\n            </button>\n          </IconContext.Provider>\n\n+          {/* ハンバーガーメニューが展開された表示 */}\n+          <div className={styles.sidebar_show}>\n+            {/* 閉じるボタン */}\n+            <IconContext.Provider value={{ size: \"30px\" }}>\n+              <div className=\" flex justify-end\">\n+                <button className=\"mr-4 mt-10 h-8 w-8\">\n+                  <RxCross1 />\n+                </button>\n+              </div>\n+              {/* メニュー */}\n+            </IconContext.Provider>\n+            <nav className=\"fixed mt-8 h-full\">\n+              <div className=\" px-12 py-4 font-bold text-2xl\">\n+                <a href=\"/\">メニュー１</a>\n+              </div>\n+              <div className=\" px-12 py-4 font-bold text-2xl\">\n+                <a href=\"/\">メニュー２</a>\n+              </div>\n+              <div className=\" px-12 py-4 font-bold text-2xl\">\n+                <a href=\"/\">メニュー３</a>\n+              </div>\n+              <div className=\" px-12 py-4 font-bold text-2xl\">\n+                <a href=\"/\">メニュー４</a>\n+              </div>\n+              <div className=\" px-12 py-4 font-bold text-2xl\">\n+                <a href=\"/\">メニュー５</a>\n+              </div>\n+            </nav>\n+          </div>\n        </div>\n      </header>\n    </main>\n  );\n}\n\n```\n\n\nメニューには以下のCSSを当てて、画面右上から幅が2/3,高さが画面MAXまでメニューを表示します。\n\n\n `z-index` を指定してメニューが上に重なるように指定します。\n\n\n```diff css:sidebar.module.css\n+.sidebar_show {\n+  width: 66.666667%;\n+  position: absolute;\n+  top: 0;\n+  height: 100vh;\n+  opacity: 0.9;\n+  background-color: rgb(255 255 240 / var(--tw-bg-opacity));\n+  z-index: 10;\n+  right: 0;\n+  transition: 0.5s;\n}\n```\n\n\n## クリック時のアニメーションをつくる\n\n\nハンバーガーメニューのクリック時にスライドイン/アウトするアニメーションはReactのステート管理とCSSアニメーションを組み合わせて実現します。\n\n\n`useState`フックを使ってメニューの開閉状態を管理するステートを追加し、メニューを開閉する関数を定義します。\n\n\nハンバーガーメニューアイコンをクリックしたときに`menuFunction`が呼び出され `opneMenu` のtrue/falseが反転します。\n\n\n`openMenu`状態に応じてハンバーガーメニューに適用するCSSクラスを切り替えることで、メニューの表示/非表示をアニメーションします。\n\n\n```diff javascript:page.js\n\"use client\";\nimport { RxHamburgerMenu } from \"react-icons/rx\";\nimport { RxCross1 } from \"react-icons/rx\";\nimport { IconContext } from \"react-icons\";\nimport styles from \"./sidebar.module.css\";\n+ import React, { useState } from \"react\";\n\n+ export default function Home() {\n+  const [openMenu, setOpenMenu] = useState(false);\n+  const menuFunction = () => {\n+    setOpenMenu(!openMenu);\n  };\n  return (\n    <main>\n      <header className=\"drop-shadow-xl bg-white\">\n        <div className=\" flex items-center container m-auto justify-between py-10 px-4 text-lg\">\n          <h2 className=\" font-bold text-3xl\">タイトル</h2>\n          <div className=\"hidden md:inline-flex\">\n            <a href=\"/\" className=\" px-3\">\n              メニュー１\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー２\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー３\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー４\n            </a>\n            <a href=\"/\" className=\" px-3\">\n              メニュー５\n            </a>\n          </div>\n\n          {/* ハンバーガーメニュー */}\n          <IconContext.Provider value={{ size: \"30px\" }}>\n+            <button onClick={menuFunction} className=\"md:hidden\">\n              <RxHamburgerMenu />\n            </button>\n          </IconContext.Provider>\n\n          {/* ハンバーガーメニューが展開された表示 */}\n          <div\n+            className={openMenu ? styles.sidebar_show : styles.sidebar_hidden}\n          >\n            {/* 閉じるボタン */}\n            <IconContext.Provider value={{ size: \"30px\" }}>\n              <div className=\" flex justify-end\">\n+                <button onClick={menuFunction} className=\"mr-4 mt-10 h-8 w-8\">\n                  <RxCross1 />\n                </button>\n              </div>\n              {/* メニュー */}\n            </IconContext.Provider>\n            <nav className=\"fixed mt-8 h-full\">\n              <div className=\" px-12 py-4 font-bold text-2xl\">\n                <a href=\"/\">メニュー１</a>\n              </div>\n              <div className=\" px-12 py-4 font-bold text-2xl\">\n                <a href=\"/\">メニュー２</a>\n              </div>\n              <div className=\" px-12 py-4 font-bold text-2xl\">\n                <a href=\"/\">メニュー３</a>\n              </div>\n              <div className=\" px-12 py-4 font-bold text-2xl\">\n                <a href=\"/\">メニュー４</a>\n              </div>\n              <div className=\" px-12 py-4 font-bold text-2xl\">\n                <a href=\"/\">メニュー５</a>\n              </div>\n            </nav>\n          </div>\n        </div>\n      </header>\n    </main>\n  );\n}\n```\n\n\n`sidebar_hidden`クラスはメニューを画面外に表示し、`transition`プロパティにより、右側からのスライドのアニメーションが0.5秒かけて実行されます。\n\n\n```diff css:sidebar.module.css\n.sidebar_show {\n  width: 66.666667%;\n  position: absolute;\n  top: 0;\n  height: 100vh;\n  opacity: 0.9;\n  background-color: rgb(255 255 240 / var(--tw-bg-opacity));\n  z-index: 10;\n  right: 0;\n  transition: 0.5s;\n}\n+.sidebar_hidden {\n+  width: 66.666667%;\n+  position: absolute;\n+  top: 0;\n+  height: 100vh;\n+  opacity: 0.9;\n+  background-color: rgb(255 255 240 / var(--tw-bg-opacity));\n+  z-index: 10;\n+  right: -66.666667%;\n+  transition: 0.5s;\n}\n```\n\n"

@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/util/getAllPosts";
+import { getDataJson } from "@/util/getDataJson";
 
 export default async function Blog() {
   //記事一覧の取得;
-  const AllPostsList = await getAllPosts();
+  //const AllPostsList = await getAllPosts();
+  const publicJson = await getDataJson();
+  const AllPostsList = publicJson.data.map((item) => item.p);
+
   //タグ一覧の取得;
   const tags = [...new Set(AllPostsList.flatMap((post) => post.tags))];
 
