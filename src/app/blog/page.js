@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getAllPosts } from "@/util/getAllPosts";
 import { getDataJson } from "@/util/getDataJson";
 
 export default async function Blog() {
