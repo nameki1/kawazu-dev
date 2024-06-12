@@ -12,8 +12,8 @@ module.exports = async function getPostData(post) {
   const tags = post.properties.tags.multi_select.map((item) => item.name);
   // categoryの取り出し
   const category = post.properties.category.select.name;
-  // overviewの取り出し
-  const overview = post.properties.overview.rich_text[0].plain_text;
+  // // overviewの取り出し
+  // const overview = post.properties.overview.rich_text[0].plain_text;
   // publishedAtの取り出し
   const publishedAt = post.properties.publishedAt.date.start;
   //updateAtの取り出し
@@ -42,7 +42,7 @@ module.exports = async function getPostData(post) {
     published,
     tags,
     category,
-    overview,
+    //overview,
     publishedAt,
     updateAt,
     eyeCatch,

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import Link from "next/link";
-import { getDataJson } from "@/util/getDataJson";
+import { getBlogsJson } from "@/util/getBlogsJson";
 import { renderToc } from "@/app/components/toc";
 import markdownToHtml from "zenn-markdown-html";
 import { SmTOC } from "@/app/components/smTOC";
@@ -10,7 +10,7 @@ import { RxUpdate } from "react-icons/rx";
 
 export async function generateStaticParams() {
   // build時に作成したdata.jsonを取り出す
-  const publicJson = await getDataJson();
+  const publicJson = await getBlogsJson();
 
   return publicJson.data.map((data) => ({
     slug: data.slug,
@@ -34,7 +34,7 @@ function getPostBySlug(publicJson, slug) {
 export default async function BlogArticle(context) {
   const slug = context.params.id;
   // build時に作成したdata.jsonを取り出す
-  const publicJson = await getDataJson();
+  const publicJson = await getBlogsJson();
   // publicJsonからslugが一致するブログデータを取得する
   const postDetails = getPostBySlug(publicJson, slug);
   // 特定の記事情報

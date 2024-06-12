@@ -4,19 +4,23 @@ const dotenv = require("dotenv");
 const { notion } = require("../src/lib/notion");
 const getPostContent = require("../src/util/getPostContent");
 const getPostData = require("../src/util/getPostData");
+const getBookLists = require("../src/util/getBookLists");
 
 dotenv.config();
 
 async function generateData() {
   // 記事一覧の取得
-  const response = await notion.databases.query({
+  const responseBlog = await notion.databases.query({
     database_id: process.env.DATABASE_ID,
   });
-  const posts = response.results;
+  const posts = responseBlog.results;
 
-  //
+  // publishedがtrueのみ抽出
+  const publishedPosts = await Promise.all(
+    posts.filter((post) => post.properties.published.checkbox)
+  );
   const data = await Promise.all(
-    posts.map(async (post) => {
+    publishedPosts.map(async (post) => {
       // 記事情報の取得
       const p = await getPostData(post);
 
@@ -34,10 +38,22 @@ async function generateData() {
       };
     })
   );
-
+  // jsonファイルに保存
   fs.writeFileSync(
-    path.join(__dirname, "../public/data.json"),
+    path.join(__dirname, "../public/blogs.json"),
     JSON.stringify({ data }, null, 2)
+  );
+
+  // 本一覧の取得
+  const responseBook = await notion.databases.query({
+    database_id: process.env.BOOK_DATABASE_ID,
+  });
+  const books = responseBook.results;
+  const bookLists = await getBookLists(books);
+  // jsonファイルに保存
+  fs.writeFileSync(
+    path.join(__dirname, "../public/books.json"),
+    JSON.stringify({ bookLists }, null, 2)
   );
 }
 
