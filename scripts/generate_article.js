@@ -10,8 +10,8 @@ const getEventLists = require("../src/util/getEventLists");
 dotenv.config();
 
 async function generateData() {
-  const flag = false;
-  if (flag) {
+  const flag = process.env.DEV_FLAG;
+  if (flag != "DEV") {
     // publicの削除
     const rmDir = ["../public/articleImages", "../public/bookImages"];
     rmDir.map((item) => {
