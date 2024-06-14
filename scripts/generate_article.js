@@ -10,35 +10,38 @@ const getEventLists = require("../src/util/getEventLists");
 dotenv.config();
 
 async function generateData() {
-  // publicの削除
-  const rmDir = ["../public/articleImages", "../public/bookImages"];
-  rmDir.map((item) => {
-    // 絶対パスに変換
-    const directoryPath = path.resolve(__dirname, item);
+  const flag = false;
+  if (flag) {
+    // publicの削除
+    const rmDir = ["../public/articleImages", "../public/bookImages"];
+    rmDir.map((item) => {
+      // 絶対パスに変換
+      const directoryPath = path.resolve(__dirname, item);
 
-    if (fs.existsSync(directoryPath)) {
-      fs.rmdirSync(directoryPath, { recursive: true });
-      console.log("ディレクトリが削除されました:", directoryPath);
-    } else {
-      console.log("ディレクトリが存在しません:", directoryPath);
-    }
-  });
-  const rmJson = [
-    "../public/blogs.json",
-    "../public/books.json",
-    "../public/events.json",
-  ];
-  rmJson.map((item) => {
-    // 絶対パスに変換
-    const directoryPath = path.resolve(__dirname, item);
+      if (fs.existsSync(directoryPath)) {
+        fs.rmdirSync(directoryPath, { recursive: true });
+        console.log("ディレクトリが削除されました:", directoryPath);
+      } else {
+        console.log("ディレクトリが存在しません:", directoryPath);
+      }
+    });
+    const rmJson = [
+      "../public/blogs.json",
+      "../public/books.json",
+      "../public/events.json",
+    ];
+    rmJson.map((item) => {
+      // 絶対パスに変換
+      const directoryPath = path.resolve(__dirname, item);
 
-    if (fs.existsSync(directoryPath)) {
-      fs.unlinkSync(directoryPath);
-      console.log("ファイルが削除されました:", directoryPath);
-    } else {
-      console.log("ファイルが存在しません:", directoryPath);
-    }
-  });
+      if (fs.existsSync(directoryPath)) {
+        fs.unlinkSync(directoryPath);
+        console.log("ファイルが削除されました:", directoryPath);
+      } else {
+        console.log("ファイルが存在しません:", directoryPath);
+      }
+    });
+  }
 
   // BlogAPIの取得
   const responseBlog = await notion.databases.query({

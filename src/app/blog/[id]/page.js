@@ -77,9 +77,9 @@ export default async function BlogArticle(context) {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-10">
         {/* 記事 */}
-        <div className="bg-white py-10 px-5 md:p-10 md:col-span-2 ">
+        <div className="bg-white py-10 px-5 md:p-10 md:col-span-7">
           <article>
             {/* タグ */}
             <div className="flex flex-wrap">
@@ -104,32 +104,30 @@ export default async function BlogArticle(context) {
           </article>
         </div>
         {/* 目次 */}
-        <div className="hidden col-span-1 sm:block">
-          <div className=" bg-white py-10 px-6 ml-5 sticky top-0">
-            <div className="">
-              <h3 className=" font-bold">目次</h3>
-              <ul className="text-sm text-gray-600">
-                {toc.map((data) =>
-                  data.name == "h1" ? (
-                    // h1のとき
-                    <div key={data.id} className="flex my-2 pr-3 pl-3">
-                      <p className="pt-1 text-xs">●</p>
-                      <li className="pl-3 font-bold">
-                        <a href={`#${data.id}`}>{data.text}</a>
-                      </li>
-                    </div>
-                  ) : (
-                    //  h2のとき
-                    <div key={data.id} className="flex my-2 pr-3 pl-2">
-                      <p className="text-xl">・</p>
-                      <li className="pt-1 pl-3">
-                        <a href={`#${data.id}`}>{data.text}</a>
-                      </li>
-                    </div>
-                  )
-                )}
-              </ul>
-            </div>
+        <div className="hidden col-span-3 sm:block">
+          <div className=" bg-white py-10 px-6 ml-9 sticky top-0">
+            <h3 className=" font-bold">目次</h3>
+            <ul className="text-sm text-gray-600">
+              {toc.map((data) =>
+                data.name == "h1" ? (
+                  // h1のとき
+                  <div key={data.id} className="flex my-2 pr-3 pl-3">
+                    <p className="pt-1 text-xs">●</p>
+                    <li className="pl-3 font-bold">
+                      <a href={`#${data.id}`}>{data.text}</a>
+                    </li>
+                  </div>
+                ) : (
+                  //  h2のとき
+                  <div key={data.id} className="flex my-2 pr-3 pl-2">
+                    <p className="text-xl">・</p>
+                    <li className="pt-1 pl-3">
+                      <a href={`#${data.id}`}>{data.text}</a>
+                    </li>
+                  </div>
+                )
+              )}
+            </ul>
           </div>
         </div>
       </div>
