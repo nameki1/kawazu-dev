@@ -1,6 +1,13 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 
 export default async function Event() {
   // build時に作成したevents.jsonを取り出す
@@ -11,49 +18,50 @@ export default async function Event() {
   const eventList = publicJson.eventLists;
   return (
     <main>
-      <div className="mt-5 bg-white">
-        <table className="table-auto">
-          <caption className="font-medium">参加イベント一覧</caption>
-          <thead>
-            <tr>
-              <th>日付</th>
-              <th>イベント名</th>
-              <th>主催者</th>
-              <th>内容</th>
-              <th>カテゴリ</th>
-              <th>ログ</th>
-              <th>メモ</th>
-            </tr>
-          </thead>
-          <tbody>
-            {eventList.map((event, index) => (
-              <tr key={index}>
-                {/* 日付 */}
-                <td>{event.date}</td>
-                {/* イベント名 */}
-                <td>{event.eventName}</td>
-                {/* 主催者 */}
-                <td>{event.organizer}</td>
-                {/* 内容 */}
-                <td>{event.contents}</td>
-                {/* カテゴリ */}
-                <td>{event.category}</td>
-                {/* ログ */}
-                <td>
-                  <Link
-                    href={{
-                      pathname: `/blog/${event.slug}`,
-                    }}
-                  >
-                    {event.slugTitle}
-                  </Link>
-                </td>
-                {/* メモ */}
-                <td>{event.memo}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="pt-5 bg-white">
+        <h1 className="ml-4 mb-5">参加イベント一覧</h1>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="参加イベント一覧">
+            <TableHead>
+              <TableRow>
+                <TableCell>日付</TableCell>
+                <TableCell>イベント名</TableCell>
+                <TableCell>主催者</TableCell>
+                <TableCell>内容</TableCell>
+                <TableCell>カテゴリ</TableCell>
+                <TableCell>ログ</TableCell>
+                <TableCell>メモ</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {eventList.map((event) => (
+                <TableRow
+                  key={event.id}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {event.date}
+                  </TableCell>
+                  <TableCell>{event.eventName}</TableCell>
+                  <TableCell>{event.organizer}</TableCell>
+                  <TableCell>{event.contents}</TableCell>
+                  <TableCell>{event.category}</TableCell>
+                  <TableCell>
+                    <Link
+                      href={{
+                        pathname: `/blog/${event.slug}`,
+                      }}
+                      className="text-[#769cbf] underline"
+                    >
+                      {event.slugTitle}
+                    </Link>
+                  </TableCell>
+                  <TableCell>{event.memo}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </div>
     </main>
   );

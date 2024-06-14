@@ -4,6 +4,7 @@ import { Navbar } from "./components/navbar";
 import "./style/globals.css";
 import "zenn-content-css";
 import { useEffect } from "react";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,14 +30,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <body className={inter.className}>
-        <div className=" min-h-screen overflow-clip">
-          <Navbar />
-          <div className=" w-hull h-full min-h-screen bg-[#e6e5e4]">
-            <div className="md:mx-5 xl:max-w-[1120px] xl:mx-auto xl:px-0">
-              {children}
+        <AppRouterCacheProvider>
+          <div className=" min-h-screen overflow-clip">
+            <Navbar />
+            <div className=" w-hull h-full min-h-screen bg-[#e6e5e4]">
+              <div className="md:mx-5 xl:max-w-[1120px] xl:mx-auto xl:px-0">
+                {children}
+              </div>
             </div>
           </div>
-        </div>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
