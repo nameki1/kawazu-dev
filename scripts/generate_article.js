@@ -5,6 +5,7 @@ const { notion } = require("../src/lib/notion");
 const getPostContent = require("../src/util/getPostContent");
 const getPostData = require("../src/util/getPostData");
 const getBookLists = require("../src/util/getBookLists");
+const getEventLists = require("../src/util/getEventLists");
 
 dotenv.config();
 
@@ -22,7 +23,11 @@ async function generateData() {
       console.log("ディレクトリが存在しません:", directoryPath);
     }
   });
-  const rmJson = ["../public/blogs.json", "../public/books.json"];
+  const rmJson = [
+    "../public/blogs.json",
+    "../public/books.json",
+    "../public/events.json",
+  ];
   rmJson.map((item) => {
     // 絶対パスに変換
     const directoryPath = path.resolve(__dirname, item);
@@ -35,7 +40,7 @@ async function generateData() {
     }
   });
 
-  // 記事一覧の取得
+  // BlogAPIの取得
   const responseBlog = await notion.databases.query({
     database_id: process.env.DATABASE_ID,
   });
@@ -70,7 +75,7 @@ async function generateData() {
     JSON.stringify({ data }, null, 2)
   );
 
-  // 本一覧の取得
+  // BookAPIの取得
   const responseBook = await notion.databases.query({
     database_id: process.env.BOOK_DATABASE_ID,
   });
@@ -80,6 +85,18 @@ async function generateData() {
   fs.writeFileSync(
     path.join(__dirname, "../public/books.json"),
     JSON.stringify({ bookLists }, null, 2)
+  );
+
+  // EventAPIの取得
+  const responseEvent = await notion.databases.query({
+    database_id: process.env.EVENT_DATABASE_ID,
+  });
+  const events = responseEvent.results;
+  const eventLists = await getEventLists(events, data);
+  // jsonファイルに保存
+  fs.writeFileSync(
+    path.join(__dirname, "../public/events.json"),
+    JSON.stringify({ eventLists }, null, 2)
   );
 }
 
